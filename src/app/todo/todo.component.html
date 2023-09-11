@@ -1,0 +1,12 @@
+<h1>{{pageTitle}}</h1>
+<div *ngIf='errorMessage'
+     class='alert alert-danger'>
+  Error: {{ errorMessage }}
+</div>
+
+<form #form="ngForm" (ngSubmit)="onSubmit(form)">
+  <label for="description">Description</label>
+  <input id="description" name="description" type="text" [value]="todo.description">
+  <label for="completed">Description</label>
+  <input id="completed" name="completed" type="checkbox" [value]="todo.isCompleted">
+</form>
